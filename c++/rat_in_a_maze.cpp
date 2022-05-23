@@ -67,7 +67,7 @@ if(solve(given,ans,n,0,0)){
 		
 		cout<<ans[i][j]<<" ";
 	}
-	cout<<endl;
+	cout<<"\n";
 }
 }
 else{
