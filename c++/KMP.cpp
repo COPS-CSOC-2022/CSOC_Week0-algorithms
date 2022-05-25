@@ -28,8 +28,6 @@ void KMP(string text, string pattern)
         cout << "The pattern occurs with shift 0";
         return;
     }
-
-   
     if (m < n)
     {
         cout << "Pattern not found";
