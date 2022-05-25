@@ -46,6 +46,5 @@ public class binarysearch{
         }
         else
         System.out.println("NUMBER NOT FOUND");
-
     }
 }
