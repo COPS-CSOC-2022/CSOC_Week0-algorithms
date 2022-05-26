@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 #define N (int)1e6+10
 
@@ -20,10 +19,10 @@ int lis(int index){
 int main(void){
 
     int length;
-    cin >> length;    
+    std::cin >> length;    
 
     for(int i=0;i<length;i++){
-        cin >> numbers[i];
+        std::cin >> numbers[i];
     }
 
     int max_length = 1;
@@ -31,7 +30,7 @@ int main(void){
     	max_length = max(max_length, lis(i)); 	
     } 
     
-    cout << max_length << endl;
+    std::cout << max_length << std::endl;
 
     return 0;
 }
