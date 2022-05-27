@@ -9,16 +9,15 @@ void naivesearch(char* p, char* t)
  
    
     for (int i = 0; i <= l2-l1; i++) {
-        int j;
+        
  
-       
-        for (j = 0; j <l1; j++){
-            if (t[i + j] != p[j])
+        for (int j = 0; j <l1; j++){
+            if ([ti + j] != p[j])
                 break;
         }
  
         if (j == l1) 
-            cout << "Pattern found at index "
+            cout << "pattern found at index "
                  << i << endl;
     }
 }
