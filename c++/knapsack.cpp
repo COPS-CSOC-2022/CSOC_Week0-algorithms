@@ -56,6 +56,6 @@ int main(){
   int ans = knap_Sack(lim,wt,val,n);
   cout<<ans<<endl;
 
-
+  return 0;
 
 }
