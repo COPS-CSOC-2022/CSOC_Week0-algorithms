@@ -3,20 +3,25 @@ using namespace std;
  
 void naivesearch(char* p, char* t)
 {
-    int l1,l2;
+    int l1,l2,k=0;
     l1= strlen(p);
     l2= strlen(t);
  
    
     for (int i = 0; i <= l2-l1; i++) {
         
- 
-        for (int j = 0; j <l1; j++){
-            if ([ti + j] != p[j])
+       k=0;
+        for ( int j = 0; j <l1; j++){
+            if (t[i + j] != p[j])
                 break;
+               
+             else
+             k++;
+
+
         }
  
-        if (j == l1) 
+        if (k == l1) 
             cout << "pattern found at index "
                  << i << endl;
     }
