@@ -1,0 +1,48 @@
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+using namespace std;
+
+void LCS(char *s1, char *s2, int x, int y) {
+  int dp[x + 1][y + 1];
+
+  for (int i = 0; i <= x; i++) {
+    for (int j = 0; j <= y; j++) {
+      if (i == 0 || j == 0)
+        dp[i][j] = 0;
+      else if (s1[i - 1] == s2[j - 1])
+        dp[i][j] = dp[i - 1][j - 1] + 1;
+      else
+        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+    }
+  }
+
+  int index = dp[x][y];
+  char LCS[index + 1];
+  LCS[index] = '\0';
+
+  int i = x, j = y;
+  while (i > 0 && j > 0) {
+    if (s1[i - 1] == s2[j - 1]) {
+      LCS[index - 1] = s1[i - 1];
+      i--;
+      j--;
+      index--;
+    }
+
+    else if (dp[i - 1][j] > dp[i][j - 1])
+      i--;
+    else
+      j--;
+  }
+  cout << "s1 : " << s1 << "\nS2 : " << s2 << "\nLCS: " << LCS << "\n";
+}
+
+int main() {
+  char s1[] = "bcjsuhshdcjs";
+  char s2[] = "bjsdcshefe";
+  int x = strlen(s1);
+  int y = strlen(s2);
+
+  LCS(s1, s2, x, y);
+}
