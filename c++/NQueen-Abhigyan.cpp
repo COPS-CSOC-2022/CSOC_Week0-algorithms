@@ -15,8 +15,8 @@ void printSolution(ll board[N][N])
     for (ll i = 0; i < N; i++)
     {
         for (ll j = 0; j < N; j++)
-            cout << " " << board[i][j] << " ";
-        printf("\n");
+            cout << board[i][j] << " ";
+        cout<<endl;
     }
 }
 
@@ -54,17 +54,13 @@ bool solveNQUtil(ll board[N][N], ll col)
 
 bool solveNQ()
 {
-    ll board[N][N] = {{0, 0, 0, 0},
-                      {0, 0, 0, 0},
-                      {0, 0, 0, 0},
-                      {0, 0, 0, 0}};
+    ll board[N][N] {};
 
     if (solveNQUtil(board, 0) == false)
     {
         cout << "Solution does not exist";
         return false;
     }
-
     printSolution(board);
     return true;
 }
