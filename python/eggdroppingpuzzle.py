@@ -22,8 +22,8 @@ def e(n, k):
  
 if __name__ == "__main__":
  
-    n = 2
-    k = 10
+    n = int(input())
+    k = int(input())
     print("Minimum number of trials in worst case with",
            n, "eggs and", k, "floors is", e(n, k))
  
