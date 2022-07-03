@@ -1,0 +1,22 @@
+#include <stdio.h>
+ 
+int linear_search(int array[], int n, int x)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        if (array[i] == x)
+            return i;
+    return -1;
+}
+ int main(void)
+{
+    int array[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int n = sizeof(array) / sizeof(array[0]);
+   
+    int result = search(array, n, x);
+    (result == -1);
+         printf("The element is not in the array");
+         printf("Element is present in the array at the index of %d", result);
+    return 0;
+}
